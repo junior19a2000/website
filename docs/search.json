@@ -82,5 +82,17 @@
       "Sobre mí persona",
       "Educación"
     ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Aplicativo web para la busqueda de expedientes Osinergmin relacionados",
+    "section": "",
+    "text": "Este proyecto implementa un sistema de búsqueda y verificación de coincidencias entre diferentes bases de datos de expedientes, utilizando técnicas de preprocesamiento de texto y comparaciones basadas en expresiones regulares y manipulación avanzada de datos con pandas. Está orientado a facilitar el cruce de información histórica de expedientes institucionales entre los años 2015 y 2022.\n\n🔧 Tecnologías y librerías utilizadas\n\nPandas: Manipulación y análisis de datos tabulares.\nre (expresiones regulares): Limpieza, transformación y comparación de texto libre.\nipywidgets: Creación de widgets interactivos para filtros y controles en Jupyter Notebook.\nPyDrive: Conexión segura con Google Drive para autenticación y manejo de archivos.\nopenpyxl: Lectura y edici’on de archivos .xlsx usados como fuentes de datos para múltiples años.\n\n\n\n⚙️ Funcionalidades principales\n\n📂 Carga masiva de bases de datos: Lectura automatizada de archivos Excel con datos de expedientes por año.\n🔐 Autenticación con Google Drive: Uso de credenciales seguras (credentials_module.json) para acceder y manejar archivos en la nube.\n🧹 Normalización de texto: Limpieza profunda de datos con eliminación de símbolos, mayúsculas/minúsculas, etc.\n🔍 Búsqueda por coincidencias: Comparación de textos usando expresiones regulares para encontrar coincidencias exactas o aproximadas entre nombres de expedientes y listados de ID.\n📊 Análisis comparativo entre archivos: Identificación de registros faltantes, duplicados, mal escritos o inconsistentes.\n🧩 Widgets interactivos: Filtrado de datos por año, tipo de expediente, y visualización dinámica de coincidencias.\n\n\n\n💡 Aspectos destacables\n\nÚtil para auditorías y trazabilidad documental, especialmente en procesos de fiscalización o control institucional.\nPermite manejar múltiples fuentes de datos con estructuras similares pero contenido variable.\nEl enfoque modular permite extenderlo fácilmente a nuevos años o tipos de documentos.\nEl uso de widgets mejora la interacción del analista sin necesidad de reescribir código.\n\n\n\n🧑🏻‍💻 Aplicativo",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto SearchIT"
+    ]
   }
 ]

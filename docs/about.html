@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aplicativo web para la busqueda de expedientes relacionados</title>
+<title>Aplicativo web para la busqueda de expedientes Osinergmin relacionados</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Aplicativo web para la busqueda de expedientes relacionados</h1>
+          <h1 class="quarto-secondary-nav-title">Aplicativo web para la busqueda de expedientes Osinergmin relacionados</h1>
         </a>     
     </div>
   </nav>
@@ -201,15 +201,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tecnologías-y-librerías-utilizadas" id="toc-tecnologías-y-librerías-utilizadas" class="nav-link active" data-scroll-target="#tecnologías-y-librerías-utilizadas">🔧 Tecnologías y librerías utilizadas</a></li>
+  <li><a href="#funcionalidades-principales" id="toc-funcionalidades-principales" class="nav-link" data-scroll-target="#funcionalidades-principales">⚙️ Funcionalidades principales</a></li>
+  <li><a href="#aspectos-destacables" id="toc-aspectos-destacables" class="nav-link" data-scroll-target="#aspectos-destacables">💡 Aspectos destacables</a></li>
+  <li><a href="#aplicativo" id="toc-aplicativo" class="nav-link" data-scroll-target="#aplicativo">🧑🏻‍💻 Aplicativo</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Aplicativo web para la busqueda de expedientes relacionados</h1>
+<h1 class="title d-none d-lg-block">Aplicativo web para la busqueda de expedientes Osinergmin relacionados</h1>
 </div>
 
 
@@ -227,8 +236,47 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
+<p>Este proyecto implementa un <strong>sistema de búsqueda y verificación de coincidencias</strong> entre diferentes bases de datos de expedientes, utilizando técnicas de preprocesamiento de texto y comparaciones basadas en expresiones regulares y manipulación avanzada de datos con <strong>pandas</strong>. Está orientado a facilitar el <strong>cruce de información histórica</strong> de expedientes institucionales entre los años 2015 y 2022.</p>
+<section id="tecnologías-y-librerías-utilizadas" class="level3">
+<h3 class="anchored" data-anchor-id="tecnologías-y-librerías-utilizadas">🔧 Tecnologías y librerías utilizadas</h3>
+<ul>
+<li><strong>Pandas</strong>: Manipulación y análisis de datos tabulares.</li>
+<li><strong>re (expresiones regulares)</strong>: Limpieza, transformación y comparación de texto libre.</li>
+<li><strong>ipywidgets</strong>: Creación de widgets interactivos para filtros y controles en Jupyter Notebook.</li>
+<li><strong>PyDrive</strong>: Conexión segura con Google Drive para autenticación y manejo de archivos.</li>
+<li><strong>openpyxl</strong>: Lectura y edici’on de archivos <code>.xlsx</code> usados como fuentes de datos para múltiples años.</li>
+</ul>
+</section>
+<section id="funcionalidades-principales" class="level3">
+<h3 class="anchored" data-anchor-id="funcionalidades-principales">⚙️ Funcionalidades principales</h3>
+<ul>
+<li>📂 <strong>Carga masiva de bases de datos</strong>: Lectura automatizada de archivos Excel con datos de expedientes por año.</li>
+<li>🔐 <strong>Autenticación con Google Drive</strong>: Uso de credenciales seguras (<code>credentials_module.json</code>) para acceder y manejar archivos en la nube.</li>
+<li>🧹 <strong>Normalización de texto</strong>: Limpieza profunda de datos con eliminación de símbolos, mayúsculas/minúsculas, etc.</li>
+<li>🔍 <strong>Búsqueda por coincidencias</strong>: Comparación de textos usando expresiones regulares para encontrar coincidencias exactas o aproximadas entre nombres de expedientes y listados de ID.</li>
+<li>📊 <strong>Análisis comparativo entre archivos</strong>: Identificación de registros faltantes, duplicados, mal escritos o inconsistentes.</li>
+<li>🧩 <strong>Widgets interactivos</strong>: Filtrado de datos por año, tipo de expediente, y visualización dinámica de coincidencias.</li>
+</ul>
+</section>
+<section id="aspectos-destacables" class="level3">
+<h3 class="anchored" data-anchor-id="aspectos-destacables">💡 Aspectos destacables</h3>
+<ul>
+<li>Útil para <strong>auditorías y trazabilidad documental</strong>, especialmente en procesos de fiscalización o control institucional.</li>
+<li>Permite manejar múltiples fuentes de datos con estructuras similares pero contenido variable.</li>
+<li>El enfoque modular permite extenderlo fácilmente a nuevos años o tipos de documentos.</li>
+<li>El uso de widgets mejora la <strong>interacción del analista sin necesidad de reescribir código</strong>.</li>
+</ul>
+</section>
+<section id="aplicativo" class="level3">
+<h3 class="anchored" data-anchor-id="aplicativo">🧑🏻‍💻 Aplicativo</h3>
+<div style="position: relative; width: 100%; min-height: 500px; padding-top: 50%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 2em; margin-bottom: 2em; overflow: hidden;
+ border-radius: 16px; will-change: transform;">
+<p><iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://junior19-searchit.hf.space" allowfullscreen="allowfullscreen" allow="fullscreen"> </iframe></p>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

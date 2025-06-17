@@ -1,6 +1,41 @@
 ---
-title: "Aplicativo web para la busqueda de expedientes relacionados"
+title: "Aplicativo web para la busqueda de expedientes Osinergmin relacionados"
 ---
 
 ---
 
+Este proyecto implementa un **sistema de búsqueda y verificación de coincidencias** entre diferentes bases de datos de expedientes, utilizando técnicas de preprocesamiento de texto y comparaciones basadas en expresiones regulares y manipulación avanzada de datos con **pandas**. Está orientado a facilitar el **cruce de información histórica** de expedientes institucionales entre los años 2015 y 2022.
+
+### 🔧 Tecnologías y librerías utilizadas
+
+- **Pandas**: Manipulación y análisis de datos tabulares.
+- **re (expresiones regulares)**: Limpieza, transformación y comparación de texto libre.
+- **ipywidgets**: Creación de widgets interactivos para filtros y controles en Jupyter Notebook.
+- **PyDrive**: Conexión segura con Google Drive para autenticación y manejo de archivos.
+- **openpyxl**: Lectura y edici'on de archivos `.xlsx` usados como fuentes de datos para múltiples años.
+
+### ⚙️ Funcionalidades principales
+
+- 📂 **Carga masiva de bases de datos**: Lectura automatizada de archivos Excel con datos de expedientes por año.
+- 🔐 **Autenticación con Google Drive**: Uso de credenciales seguras (`credentials_module.json`) para acceder y manejar archivos en la nube.
+- 🧹 **Normalización de texto**: Limpieza profunda de datos con eliminación de símbolos, mayúsculas/minúsculas, etc.
+- 🔍 **Búsqueda por coincidencias**: Comparación de textos usando expresiones regulares para encontrar coincidencias exactas o aproximadas entre nombres de expedientes y listados de ID.
+- 📊 **Análisis comparativo entre archivos**: Identificación de registros faltantes, duplicados, mal escritos o inconsistentes.
+- 🧩 **Widgets interactivos**: Filtrado de datos por año, tipo de expediente, y visualización dinámica de coincidencias.
+
+### 💡 Aspectos destacables
+
+- Útil para **auditorías y trazabilidad documental**, especialmente en procesos de fiscalización o control institucional.
+- Permite manejar múltiples fuentes de datos con estructuras similares pero contenido variable.
+- El enfoque modular permite extenderlo fácilmente a nuevos años o tipos de documentos.
+- El uso de widgets mejora la **interacción del analista sin necesidad de reescribir código**.
+
+### 🧑🏻‍💻 Aplicativo
+
+<div style="position: relative; width: 100%; min-height: 500px; padding-top: 50%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 2em; margin-bottom: 2em; overflow: hidden;
+ border-radius: 16px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://junior19-searchit.hf.space" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
