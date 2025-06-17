@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -201,8 +230,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#digitalización-de-diagramas" id="toc-digitalización-de-diagramas" class="nav-link active" data-scroll-target="#digitalización-de-diagramas">Digitalización de diagramas</a></li>
+  <li><a href="#configuración-geométrica-de-la-transmisión" id="toc-configuración-geométrica-de-la-transmisión" class="nav-link" data-scroll-target="#configuración-geométrica-de-la-transmisión">Configuración geométrica de la transmisión</a></li>
+  <li><a href="#ejes-de-transmisión-huecos" id="toc-ejes-de-transmisión-huecos" class="nav-link" data-scroll-target="#ejes-de-transmisión-huecos">Ejes de transmisión huecos</a></li>
+  <li><a href="#cálculo-general-de-ejes-de-transmisión" id="toc-cálculo-general-de-ejes-de-transmisión" class="nav-link" data-scroll-target="#cálculo-general-de-ejes-de-transmisión">Cálculo general de ejes de transmisión</a></li>
+  <li><a href="#fuerzas-cortantes-en-ejes-de-transmisión" id="toc-fuerzas-cortantes-en-ejes-de-transmisión" class="nav-link" data-scroll-target="#fuerzas-cortantes-en-ejes-de-transmisión">Fuerzas cortantes en ejes de transmisión</a></li>
+  <li><a href="#elementos-de-mayor-estres-en-el-eje-de-transmisión" id="toc-elementos-de-mayor-estres-en-el-eje-de-transmisión" class="nav-link" data-scroll-target="#elementos-de-mayor-estres-en-el-eje-de-transmisión">Elementos de mayor estres en el eje de transmisión</a></li>
+  <li><a href="#vibraciones-en-ejes-de-transmisión" id="toc-vibraciones-en-ejes-de-transmisión" class="nav-link" data-scroll-target="#vibraciones-en-ejes-de-transmisión">Vibraciones en ejes de transmisión</a></li>
+  <li><a href="#analisis-de-elementos-bidimensionales-de-transmisión-mediante-elementos-finitos" id="toc-analisis-de-elementos-bidimensionales-de-transmisión-mediante-elementos-finitos" class="nav-link" data-scroll-target="#analisis-de-elementos-bidimensionales-de-transmisión-mediante-elementos-finitos">Analisis de elementos bidimensionales de transmisión mediante elementos finitos</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -234,8 +276,199 @@ ul.task-list li input[type="checkbox"] {
  border-radius: 16px; will-change: transform;">
 <p><iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://junior19a2000.github.io/Visor/PSTC.html" allowfullscreen="allowfullscreen" allow="fullscreen"> </iframe></p>
 </div>
+<p>A continuación se detallan las principales diferencias respecto a tesis similares:</p>
+<section id="digitalización-de-diagramas" class="level3">
+<h3 class="anchored" data-anchor-id="digitalización-de-diagramas">Digitalización de diagramas</h3>
+<div data-align="justify">
+Dado que para el cálculo y diseño de los componentes de un sistema de transmisión de potencia mecánico, resulta indispensable hacer uso de diagramas para determinar ciertos factores de suma importancia, lo cual consume tiempo y precisión, se ha visto por conveniente procesar dichos diagramas, para la obtención rapida y precisa de los señalados factores. Las ecuaciones utilizadas para dicho procesamiento son:
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large x_{n_{a,b}} = \frac{x_{n_{b,a}} - x_{1_{b,a}}}{x_{2_{b,a}} - x_{1_{b,a}}}(x_{2_{a,b}} - x_{1_{a,b}}) + x_{1_{a,b}}
+\]</span></p>
+<p><span class="math display">\[
+\large y_{n_{a,b}} = \frac{y_{n_{b,a}} - y_{1_{b,a}}}{y_{2_{b,a}} - y_{1_{b,a}}}(y_{2_{a,b}} - y_{1_{a,b}}) + y_{1_{a,b}}
+\]</span></p>
+<p><br></p>
+</section>
+<section id="configuración-geométrica-de-la-transmisión" class="level3">
+<h3 class="anchored" data-anchor-id="configuración-geométrica-de-la-transmisión">Configuración geométrica de la transmisión</h3>
+<div data-align="justify">
+La desalineación horizontal o vertical entre el eje del motor y el eje de transmisión del sistema resulta relevante al momento de determinar la magnitud, orientación y sentido de las fuerzas que se transmiten al último de los mencionados ejes. Los ángulos de descomposición de las fuerzas de transmisión se calculan con las siguientes expresiones:
+</div>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="files/DIAGRAMA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p><span class="math display">\[\large \phi = \arccos\left(\frac{R - r}{a}\right) \quad \varphi = \arccos\left(\frac{B}{a}\right)\]</span></p>
+<p><span class="math display">\[\large \beta  = 90 + \varphi  - \phi \quad \quad \alpha  = 2\varphi  - \beta\]</span></p>
+<p><br></p>
+<p>Dependiendo del sentido de giro del motor, las fuerzas en los ejes X y Y se cálculan con las siguientes igualdades, dependiendo del sentido del motor:</p>
+<p><br></p>
+<p><span class="math display">\[
+\large \text{Antihorario:} \quad \begin{array}{l}
+F_{x'} = F_{\max}\cos(\beta) + F_{\min}\cos(\alpha) \\
+F_{y'} = F_{\max}\sin(\beta) + F_{\min}\sin(\alpha)
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\large \text{Horario:} \quad \quad \quad \begin{array}{l}
+F_{x'} = F_{\min}\cos(\beta) + F_{\max}\cos(\alpha) \\
+F_{y'} = F_{\min}\sin(\beta) + F_{\max}\sin(\alpha)
+\end{array}
+\]</span></p>
+<p><br></p>
+</section>
+<section id="ejes-de-transmisión-huecos" class="level3">
+<h3 class="anchored" data-anchor-id="ejes-de-transmisión-huecos">Ejes de transmisión huecos</h3>
+<div data-align="justify">
+Para el análisis de ejes huecos, se ha considerado el efecto del orificio interior, en las propiedades geométricas del eje de transmisión. Dichas propiedades son:
+</div>
+<p><br></p>
+<p>Área <span class="math display">\[A = \pi (R^2 - r^2)\]</span></p>
+<p>Momento polar de inercia <span class="math display">\[\large J = \frac{\pi (R^4 - r^4)}{2}\]</span></p>
+<p>Primer momento de área <span class="math display">\[\large I = \frac{\pi (R^4 - r^4)}{4}\]</span></p>
+<p>Segundo momento de área <span class="math display">\[\large Q = \frac{2(R^3 - r^3) \sin ^3\alpha}{3}\]</span></p>
+<p>Espesor <span class="math display">\[t = 2(R - r)\sin \alpha\]</span></p>
+<p><br></p>
+</section>
+<section id="cálculo-general-de-ejes-de-transmisión" class="level3">
+<h3 class="anchored" data-anchor-id="cálculo-general-de-ejes-de-transmisión">Cálculo general de ejes de transmisión</h3>
+<div data-align="justify">
+Mediante el método de las integraciones concecutivas, se hace posible determinar las fuerzas cortantes, momentos flectores, deformaciones angulares y lineales presentes en el eje de transmisión. Las ecuaciones que describen dichos resultados, para cada tramo del eje, se han planteado de la siguiente manera:
+</div>
+<p><br></p>
+<p>Fuerzas cortantes:</p>
+<p><span class="math display">\[
+\large V_k(x) = - \sum_{i=1}^k F_i - w_i(x - x_i) - \sum_{i=1}^k w_{i-1}(x_i - x_{i-1})
+\]</span></p>
+<p><br></p>
+<p>Momentos flectores:</p>
+<p><span class="math display">\[
+\large M_k(x) = -x\sum_{i=1}^k F_i - \frac{1}{2}w_i(x - x_i)^2 - x\sum_{i=1}^k w_{i-1}(x_i - x_{i-1}) + C_{1_i} + M_i
+\]</span></p>
+<p><br></p>
+<p>Deformaciones angulares:</p>
+<p><span class="math display">\[
+\large \theta_k(x) = \frac{- \frac{x^2}{2}\sum_{i=1}^k F_i - \frac{1}{6}w_i(x - x_i)^3 - \frac{x^2}{2}\sum_{i=1}^k w_{i-1}(x_i - x_{i-1}) + C_{1_i}x + M_ix + C_{2_i}}{E_iI_i}
+\]</span></p>
+<p><br></p>
+<p>Deformaciones lineales:</p>
+<p><span class="math display">\[
+\large y_k(x) = \frac{- \frac{x^3}{6}\sum_{i=1}^k F_i - \frac{1}{24}w_i(x - x_i)^4 - \frac{x^3}{6}\sum_{i=1}^k w_{i-1}(x_i - x_{i-1}) + \frac{C_{1_i}x^2}{2} + \frac{M_ix^2}{2} + C_{2_i}x + C_{3_i}}{E_iI_i}
+\]</span></p>
+<p><br></p>
+<div data-align="justify">
+Para k = 1 → T, donde T es el numero de tramos del eje de transmisión. Aplicando las condiciones de frontera correspondientes en dichas ecuaciones y considerando ademas a las ecuaciones referidas al equilibrio estático, siempre sera posible cálcular todas las incognitas presentes en el sistema de ecuaciones formulado. Esto significa que, sin importar el número de apoyos y cargas presentes en el eje de transmisión o sus propiedades, este se podra cálcular sin problemas.
+</div>
+<p><br></p>
+</section>
+<section id="fuerzas-cortantes-en-ejes-de-transmisión" class="level3">
+<h3 class="anchored" data-anchor-id="fuerzas-cortantes-en-ejes-de-transmisión">Fuerzas cortantes en ejes de transmisión</h3>
+<section id="en-el-analisis-de-rigidez-y-de-vibraciones" class="level4">
+<h4 class="anchored" data-anchor-id="en-el-analisis-de-rigidez-y-de-vibraciones">En el analisis de rigidez y de vibraciones</h4>
+<div data-align="justofy">
+Por medio de la teoría de Timoshenko, se incorporan los efectos de las fuerzas cortantes en el cálculo de las reacciones y deformaciones presentes en el eje de transmisión.
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large k = \frac{EI}{L^3(1 + \varphi)} \left[ \begin{array}{cccc}
+12 &amp; 6L &amp; -12 &amp; 6L \\
+6L &amp; (4 + \varphi)L^2 &amp; -6L &amp; (2 - \varphi)L^2 \\
+-12 &amp; -6L &amp; 12 &amp; -6L \\
+6L &amp; (2 - \varphi)L^2 &amp; -6L &amp; (4 + \varphi)L^2
+\end{array} \right]
+\]</span></p>
+<p><br></p>
+<div data-align="justify">
+Esto se debe a la presencia del siguiente factor (en contraste con la teoría de Euler y Bernoulli):
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large \varphi = \frac{12EI}{K_sAGL^2}
+\]</span></p>
+<p><br></p>
+<div data-align="justify">
+Dentro del cual se encuentra el termino Ks, mas conocido como factor de área y depende del tipo de sección a analizar, y del material correspondiente a dicha sección.
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large K_S = \frac{6(1 + \nu)(1 + m^2)^2}{(7 + 6\nu)(1 + m^2)^2 + (20 + 12\nu)m^2} \to m = \frac{r}{R} \quad \text{y} \quad \nu = 0.3
+\]</span></p>
+<p><br></p>
+</section>
+<section id="en-el-analisis-estático-y-dinámico" class="level4">
+<h4 class="anchored" data-anchor-id="en-el-analisis-estático-y-dinámico">En el analisis estático y dinámico</h4>
+<div data-align="justify">
+Los esfueros cortantes estáticos, independientemente de la teoria de cálculo utilizada, se computan por medio de la siguiente expresión:
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large \tau_{\text{cortante}} = \frac{FQ}{It}
+\]</span></p>
+<p><br></p>
+<div data-align="justify">
+Los esfueros cortantes dinámicos, independientemente de la teoria de cálculo utilizada, se computan por medio de la siguiente expresión:
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large \tau_{\text{medio cortante}} = \frac{2(R^2 + Rr + r^2)(F_y + F_z)}{3\pi(R^4 - r^4)}
+\]</span></p>
+<p><span class="math display">\[
+\large \tau_{\text{alternante cortante}} = \frac{2(R^2 + Rr + r^2)|F_y - F_z|}{3\pi(R^4 - r^4)}
+\]</span></p>
+<p><br></p>
+</section>
+</section>
+<section id="elementos-de-mayor-estres-en-el-eje-de-transmisión" class="level3">
+<h3 class="anchored" data-anchor-id="elementos-de-mayor-estres-en-el-eje-de-transmisión">Elementos de mayor estres en el eje de transmisión</h3>
+<div data-align="justify">
+A diferencia de los software modernos de diseño asistido por computadora, la aplicación desarrollada se basa en un análisis bidimiensional, por lo que era imperativo seleccionar un elemento a analizar para cada sección del eje. Ahora bien, dado que por su naturaleza y aplicación práctica, los esfuerzos flexionantes son mas relevantes que los esfuerzos cortantes, se opto por establecer que el elemento a analizar sera aquel en el cual se presente el esfuerzo flexionante máximo. En magnitud, el valor de dicho esfuerzo se calcula como:
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large \sigma_{yz} = \frac{4R(M_y\sin \beta + M_z\cos \beta)}{\pi(R^4 - r^4)}
+\]</span></p>
+<p><br></p>
+<div data-align="justify">
+El máximo de la expresión anterior, se determina bajo el siguiente ángulo:
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large \beta = \arctan\frac{M_y}{M_z}
+\]</span></p>
+<p><br></p>
+<div data-align="justify">
+En cuanto a la ubicación de dicho elemento, este se encontrara en el sector en el cual el sentido de los esfuerzos flexionantes y axiales coincidan, y desfasado en beta grados respecto de dicho sector. En este punto, cabe señalar que tanto los esfuerzos flexionantes y cortantes se suman, de manera independiente, cuando coinciden en su orientación.
+</div>
+<p><br></p>
+</section>
+<section id="vibraciones-en-ejes-de-transmisión" class="level3">
+<h3 class="anchored" data-anchor-id="vibraciones-en-ejes-de-transmisión">Vibraciones en ejes de transmisión</h3>
+<div data-align="justify">
+Los limites en los cuales se encuentra comprendida la velocidad crítica del eje, se determinan mediante las ecuaciones de Rayleight y Ritz.
+</div>
+<p><br></p>
+<p><span class="math display">\[
+\large \text{Límite inferior:}\quad \text{RPM} = \frac{30}{\pi}\sqrt{\frac{g}{\max(\delta_R)}}
+\]</span></p>
+<p><span class="math display">\[
+\large \text{Límite superior:}\quad \text{RPM} = \frac{30}{\pi}\sqrt{g\frac{\sum_{i=1}^T \rho_i A_i \int y_i dx}{\sum_{i=1}^T \rho_i A_i \int y_i^2 dx}}
+\]</span></p>
+<p><br></p>
+</section>
+<section id="analisis-de-elementos-bidimensionales-de-transmisión-mediante-elementos-finitos" class="level3">
+<h3 class="anchored" data-anchor-id="analisis-de-elementos-bidimensionales-de-transmisión-mediante-elementos-finitos">Analisis de elementos bidimensionales de transmisión mediante elementos finitos</h3>
+<div data-align="justify">
+Se utilzan elementos triangulares de deformación constante (CST), donde cada uno de estos esta definido por tres pares de coordenadas, un área, un módulo de elasticidad, un coeficiente de Poisson y un espesor, a partir de los cuales se procede a formular la matriz de rigidez respectiva. Con las matrices de rigidez individuales se plantea la matriz de rigidez global, la cual, junto con las matrices de fuerzas y desplazamientos, se redimensionan en base a las condiciones de frontera, para posteriormente resolver el sistema general y determinar asi, las reacciones y desplazamientos en cada nodo de la malla, lo cual a su vez, permite calcular los esfuerzos a los cuales esta sometido el elemento que se requiera analizar.
+</div>
+<p><br></p>
+<p><span class="math display">\[\large [F]=[K][d] → [\sigma_x, \sigma_y, \tau_{xy}]\]</span></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
