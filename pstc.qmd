@@ -1,0 +1,66 @@
+---
+title: "Aplicativo web para la fiscalización de sistemas de tanques enterrados a nivel nacional"
+---
+
+---
+
+Este aplicativo es una **presentación web interactiva** desarrollada como parte de una **tesis de bachillerato**, titulada *"Power System Transmission Calculator (PSTC)"*. La aplicación está implementada con **Streamlit**, y se estructura como una serie de diapositivas temáticas, permitiendo al usuario explorar la tesis de manera intuitiva y visual.
+
+### 🔧 Tecnologías y librerías utilizadas
+
+- **Streamlit**: Framework principal para la interfaz web.
+- **streamlit_flow**: Para crear diagramas de flujo interactivos y visuales.
+- **PIL (Python Imaging Library)**: Para la carga y manipulación de imágenes.
+- **MATLAB**: Motor de cálculo en el backend (complementario a la presentación).
+- **GitHub**: Control de versiones y despliegue del código.
+
+### ⚙️ Funcionalidades principales
+
+- 🧭 **Sistema de navegación modular**: Implementado con una clase `Slides`, que permite desplazarse fluidamente entre secciones (10 diapositivas organizadas).
+- 🖼️ **Componentes UI personalizados**: Clases como `titulo`, `texto`, y `flowchart` permiten mantener coherencia visual entre las páginas.
+- 🔁 **Diagramas interactivos**: Diapositivas con nodos conectados animados, ideales para explicar procesos complejos.
+- 🖼️ **Carga eficiente de imágenes**: Se usan funciones con caché para acelerar la carga de elementos gráficos.
+- 🏫 **Branding institucional**: La app presenta el logo de la UNSA en la barra lateral, reforzando identidad académica.
+
+### 🧠 Contenido de las diapositivas
+
+1. Página principal (presentación)
+2. Resumen
+3. Introducción
+4. Marco teórico
+5. Marco metodológico
+6. Resultados
+7. Validación
+8. Aplicación práctica
+9. Conclusiones
+10. Recomendaciones
+
+### 💡 Aspectos destacables
+
+#### 🚀 Innovación Técnica
+
+- Digitalización de diagramas técnicos con ecuaciones matemáticas complejas (`LaTeX`).
+- Integración de tecnologías heterogéneas: MATLAB + GitHub + Streamlit.
+- Componentes visuales HTML reutilizables.
+- Arquitectura escalable, mantenible y modular.
+
+#### 📊 Impacto del Proyecto
+
+- Aplicación gratuita y accesible para ingenieros mecánicos.
+- Validación práctica con casos reales de la industria.
+- Primera tesis en la facultad que combina ingeniería mecánica e informática mediante una herramienta digital.
+- Utiliza visualizaciones modernas para apoyar el aprendizaje técnico.
+
+### 🧩 Notas finales
+
+Este proyecto representa una **convergencia única entre ingeniería mecánica y desarrollo de software**. La aplicación en **Streamlit** funciona como interfaz visual para un sistema de cálculo más amplio en **MATLAB**, demostrando habilidades en diseño de soluciones **end-to-end**, integración de tecnologías y generación de herramientas educativas modernas.
+
+### 🧑🏻‍💻 Aplicativo
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 50%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 2em; margin-bottom: 2em; overflow: hidden;
+ border-radius: 16px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://powersystemtransmissioncalculator.streamlit.app/?embed=true&embed_options=light_theme" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>

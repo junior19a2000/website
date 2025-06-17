@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  bread-crumbs: false
+  navbar:
+    left:
+      - icon: github
+        text: "GitHub"
+        href: https://github.com/junior19a2000
+      - icon: "emoji-smile"
+        text: "Hugging Face"
+        href: https://huggingface.co/Junior19
+      - icon: linkedin
+        text: "LinkedIn"
+        href: https://www.linkedin.com/in/junior-joel-aguilar-hancco-34317719b/
+      - icon: instagram
+        text: "Instagram"
+        href: https://www.instagram.com/junior192k/
+    title: "MI SITIO WEB PERSONAL"
+  
+  sidebar:
+    style: "docked"
+    alignment: "center"
+    search: false
+    contents:
+      - section: "Sobre mí persona"
+        contents:
+          - text: "Presentación"
+            href: index.qmd
+          - text: "Educación"
+            href: education.qmd
+          - text: "Currículum Vitae"
+            href: curriculum.qmd
+      - section: "Portafolio laboral"
+        contents:
+          - text: "Proyecto SearchIT"
+            href: about.qmd
+          - text: "Proyecto AHP"
+            href: ahp.qmd
+          - text: "Proyecto STE"
+            href: ste.qmd
+          - text: "Proyecto PSTC"
+            href: pstc.qmd
+  # page-footer: 
+  #   border: true
+  #   center: "Desarrollado con Quarto y desplegado con GitHub"
+format:
+  html:
+    theme:
+      - lux
+      - flatly
+    css: styles.css
+    toc: true
+
+editor:
+  render-on-save: true
+

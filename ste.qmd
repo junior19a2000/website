@@ -1,0 +1,50 @@
+---
+title: "Aplicativo web para la fiscalización de sistemas de tanques enterrados a nivel nacional"
+---
+
+---
+
+Este aplicativo interactivo, desarrollado con **Marimo** y alojado en [Hugging Face Spaces](https://huggingface.co/spaces/Junior19/STE2025), permite realizar un **análisis técnico-normativo** del cumplimiento del **Decreto Supremo N° 001-2022-EM**, que regula la **hermeticidad de tanques y tuberías enterrados** que almacenan combustibles líquidos (CL) en el Perú.
+
+La herramienta integra múltiples fuentes de datos, evalúa el cumplimiento técnico a nivel nacional y regional, y genera **informes y oficios automatizados** dirigidos a establecimientos con incumplimientos detectados.
+
+### 🔧 Tecnologías y librerías utilizadas
+
+- **Marimo**: Framework Python para apps interactivas y notebooks reproducibles.
+- **Pandas** y **NumPy**: Limpieza, transformación y análisis de datos estructurados.
+- **Altair**: Visualización avanzada de datos, como barras apiladas y mapas de calor.
+- **DocxTemplate**: Generación automática de documentos `.docx` con plantillas dinámicas.
+- **gspread**, **requests**, **zipfile**, **datetime**: Manipulación de archivos, descargas web y fechas.
+- **OpenPyXL**: Exportación de resultados a Excel.
+- **Regex (re)**: Limpieza y extracción de datos no estructurados en campos complejos.
+
+### ⚙️ Funcionalidades principales
+
+- 📥 **Descarga y procesamiento de registros oficiales** desde fuentes de OSINERGMIN.
+- 🧪 **Evaluación técnica del estado de tanques**: hermeticidad, antigüedad, tipo de combustible, pruebas realizadas, etc.
+- 🧾 **Generación de matriz consolidada** con toda la información estructurada por agente fiscalizado.
+- 📊 **Visualizaciones dinámicas**:
+  - Mapas de calor de tanques herméticos/no herméticos.
+  - Gráficos regionales de cumplimiento.
+  - Dispersión de edad vs capacidad de tanques.
+- 🗃️ **Generación automatizada de oficios personalizados** por región, incluyendo gráficos e información normativa.
+- 📈 **Exportación de datos filtrados** para seguimiento o análisis posterior.
+- 🔍 **Filtros por región, tipo de análisis y estado (completo, incompleto, nulo)**.
+
+### 💡 Aspectos destacables
+
+- Aplicación enfocada en **gestión regulatoria y cumplimiento normativo**.
+- Automatización completa del flujo: desde la recolección hasta la emisión de oficios.
+- Funcionalidad para **detectar establecimientos fuera de plazo** o sin pruebas registradas.
+- Se adapta fácilmente a nuevas normativas o grupos regionales.
+- Promueve la **fiscalización inteligente**, priorizando recursos hacia agentes con mayor riesgo.
+
+### 🧑🏻‍💻 Aplicativo
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 50%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 2em; margin-bottom: 2em; overflow: hidden;
+ border-radius: 16px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://junior19-ste2025.hf.space" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>

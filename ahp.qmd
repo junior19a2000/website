@@ -1,0 +1,43 @@
+---
+title: "Aplicativo web para la aplicación del Método del proceso jerárquico analítico en las actividades de comercialización de hidrocarburos en el Perú"
+---
+
+---
+
+Este proyecto implementa un **sistema de priorización de riesgos** utilizando el **Método Analítico Jerárquico (AHP)**, con una interfaz web interactiva desarrollada con [**Marimo**](https://www.marimo.io/) y alojada en [Hugging Face Spaces](https://huggingface.co/spaces/Junior19/AHPmethod).
+
+El objetivo es facilitar la **evaluación multicriterio de riesgos** y la **distribución estratégica de acciones fiscales**, especialmente útil en contextos como el planeamiento anual de inspecciones o monitoreos institucionales.
+
+### 🔧 Tecnologías y librerías utilizadas
+
+- **Marimo**: Framework Python para construir notebooks interactivos y apps web.
+- **NumPy** y **Pandas**: Procesamiento y análisis de matrices y datos.
+- **gspread**: Conexión con Google Sheets para cargar, escribir y sincronizar datos en tiempo real.
+- **oauth2client**: Autenticación segura con Google APIs mediante archivo `credentials.json`.
+
+### ⚙️ Funcionalidades principales
+
+- 📊 **Evaluación AHP Interactiva**: Comparación de criterios mediante sliders visuales para construir matrices de decisión.
+- ✅ **Verificación de consistencia**: Cálculo automático de CI (Índice de Consistencia) y CR (Razón de Consistencia) para validar juicios.
+- 🔁 **Cálculo multicriterio por evidencia**: Promedia matrices de expertos y genera una priorización robusta y consensuada.
+- 📥 **Integración con Google Sheets**: Lectura dinámica de bases de datos de riesgo, criterios, actividades y unidades.
+- 🗂️ **Generación de resultados regionalizados**: Matriz por región con niveles de riesgo (`ALTO`, `MEDIO`, `BAJO`) y número de fiscalizaciones requeridas.
+- 🗓️ **Distribución temporal de acciones**: Asignación mensual de acciones operativas según ponderación.
+- 💾 **Exportación de resultados**: Guarda resultados finales de consistencia en nuevas hojas dentro del mismo Google Sheet.
+
+### 💡 Aspectos destacables
+
+- Enfocado en la **transparencia y trazabilidad** de decisiones institucionales.
+- Modular y fácil de adaptar a otros tipos de análisis AHP (educación, salud, proyectos).
+- Permite centralizar la toma de decisiones con datos colaborativos en línea (Google Sheets).
+- Interfaz amigable que no requiere conocimientos técnicos del usuario final.
+
+### 🧑🏻‍💻 Aplicativo
+
+<div style="position: relative; width: 100%; height: 0; padding-top: 50%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 2em; margin-bottom: 2em; overflow: hidden;
+ border-radius: 16px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://junior19-ahpmethod.hf.space" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>

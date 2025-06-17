@@ -1,0 +1,12 @@
+---
+title: "Junior Aguilar"
+subtitle: "Ingeniero mecánico y apasionado por el mundo de la informática"
+image: "files/PERFIL.jpg"
+about:
+  template: jolla
+---
+
+---
+::: {.text-justify}
+Estudié la carrera profesional de Ingeniería Mecánica en la Universidad Nacional de San Agustín de Arequipa y tengo un gran interés en el mundo de las energías renovables y no renovables, la programación informática y el diseño mecánico. Me considero alguien proactivo, curioso y siempre en busca de aprender cosas nuevas. Me gusta encontrar soluciones prácticas y eficientes a los retos que se van presentando, y mejorar constantemente en lo que hago. Actualmente tengo 25 años y trabajo como Supervisor 4 en la Unidad Técnica de Hidrocarburos Líquidos de Osinergmin, participando en la fiscalización de las actividades que se desarrollan en el sector comercial de los hidrocarburos a nivel nacional.
+:::

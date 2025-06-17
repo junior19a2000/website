@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Junior Aguilar",
+    "section": "",
+    "text": "Estudié la carrera profesional de Ingeniería Mecánica en la Universidad Nacional de San Agustín de Arequipa y tengo un gran interés en el mundo de las energías renovables y no renovables, la programación informática y el diseño mecánico. Me considero alguien proactivo, curioso y siempre en busca de aprender cosas nuevas. Me gusta encontrar soluciones prácticas y eficientes a los retos que se van presentando, y mejorar constantemente en lo que hago. Actualmente tengo 25 años y trabajo como Supervisor 4 en la Unidad Técnica de Hidrocarburos Líquidos de Osinergmin, participando en la fiscalización de las actividades que se desarrollan en el sector comercial de los hidrocarburos a nivel nacional.",
+    "crumbs": [
+      "GitHub",
+      "Sobre mí persona",
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Portafolio laboral",
+    "section": "",
+    "text": "Esta pagina es sobre mi portafolio laboral.",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto SearchIT"
+    ]
+  },
+  {
+    "objectID": "index.html#competencias",
+    "href": "index.html#competencias",
+    "title": "Junior Aguilar",
+    "section": "Competencias",
+    "text": "Competencias\n\nSolid Works",
+    "crumbs": [
+      "GitHub",
+      "Sobre mí"
+    ]
+  },
+  {
+    "objectID": "education.html",
+    "href": "education.html",
+    "title": "Ingeniero Mecánico",
+    "section": "",
+    "text": "Obtuve mi título profesional de ingeniero mecánico mediante el trabajo de tesis titulado: “Desarrollo e implementación de una aplicación computacional para el cálculo de componentes de sistemas de transmisión de potencia utilizando métodos de elementos finitos y analíticos”, el cual fue aprobado por unanimidad.",
+    "crumbs": [
+      "GitHub",
+      "Sobre mí persona",
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "curriculum.html",
+    "href": "curriculum.html",
+    "title": "",
+    "section": "",
+    "text": "Blue and White Clean and Professional Resume de JUNIOR JOEL AGUILAR HANCCO",
+    "crumbs": [
+      "GitHub",
+      "Sobre mí persona",
+      "Currículum Vitae"
+    ]
+  },
+  {
+    "objectID": "ste.html",
+    "href": "ste.html",
+    "title": "Aplicativo web para la fiscalización de sistemas de tanques enterrados a nivel nacional",
+    "section": "",
+    "text": "Este aplicativo interactivo, desarrollado con Marimo y alojado en Hugging Face Spaces, permite realizar un análisis técnico-normativo del cumplimiento del Decreto Supremo N° 001-2022-EM, que regula la hermeticidad de tanques y tuberías enterrados que almacenan combustibles líquidos (CL) en el Perú.\nLa herramienta integra múltiples fuentes de datos, evalúa el cumplimiento técnico a nivel nacional y regional, y genera informes y oficios automatizados dirigidos a establecimientos con incumplimientos detectados.\n\n🔧 Tecnologías y librerías utilizadas\n\nMarimo: Framework Python para apps interactivas y notebooks reproducibles.\nPandas y NumPy: Limpieza, transformación y análisis de datos estructurados.\nAltair: Visualización avanzada de datos, como barras apiladas y mapas de calor.\nDocxTemplate: Generación automática de documentos .docx con plantillas dinámicas.\ngspread, requests, zipfile, datetime: Manipulación de archivos, descargas web y fechas.\nOpenPyXL: Exportación de resultados a Excel.\nRegex (re): Limpieza y extracción de datos no estructurados en campos complejos.\n\n\n\n⚙️ Funcionalidades principales\n\n📥 Descarga y procesamiento de registros oficiales desde fuentes de OSINERGMIN.\n🧪 Evaluación técnica del estado de tanques: hermeticidad, antigüedad, tipo de combustible, pruebas realizadas, etc.\n🧾 Generación de matriz consolidada con toda la información estructurada por agente fiscalizado.\n📊 Visualizaciones dinámicas:\n\nMapas de calor de tanques herméticos/no herméticos.\nGráficos regionales de cumplimiento.\nDispersión de edad vs capacidad de tanques.\n\n🗃️ Generación automatizada de oficios personalizados por región, incluyendo gráficos e información normativa.\n📈 Exportación de datos filtrados para seguimiento o análisis posterior.\n🔍 Filtros por región, tipo de análisis y estado (completo, incompleto, nulo).\n\n\n\n💡 Aspectos destacables\n\nAplicación enfocada en gestión regulatoria y cumplimiento normativo.\nAutomatización completa del flujo: desde la recolección hasta la emisión de oficios.\nFuncionalidad para detectar establecimientos fuera de plazo o sin pruebas registradas.\nSe adapta fácilmente a nuevas normativas o grupos regionales.\nPromueve la fiscalización inteligente, priorizando recursos hacia agentes con mayor riesgo.\n\n\n\n🧑🏻‍💻 Aplicativo",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto STE"
+    ]
+  },
+  {
+    "objectID": "ahp.html",
+    "href": "ahp.html",
+    "title": "Aplicativo web para la aplicación del Método del proceso jerárquico analítico en las actividades de comercialización de hidrocarburos en el Perú",
+    "section": "",
+    "text": "Este proyecto implementa un sistema de priorización de riesgos utilizando el Método Analítico Jerárquico (AHP), con una interfaz web interactiva desarrollada con Marimo y alojada en Hugging Face Spaces.\nEl objetivo es facilitar la evaluación multicriterio de riesgos y la distribución estratégica de acciones fiscales, especialmente útil en contextos como el planeamiento anual de inspecciones o monitoreos institucionales.\n\n🔧 Tecnologías y librerías utilizadas\n\nMarimo: Framework Python para construir notebooks interactivos y apps web.\nNumPy y Pandas: Procesamiento y análisis de matrices y datos.\ngspread: Conexión con Google Sheets para cargar, escribir y sincronizar datos en tiempo real.\noauth2client: Autenticación segura con Google APIs mediante archivo credentials.json.\n\n\n\n⚙️ Funcionalidades principales\n\n📊 Evaluación AHP Interactiva: Comparación de criterios mediante sliders visuales para construir matrices de decisión.\n✅ Verificación de consistencia: Cálculo automático de CI (Índice de Consistencia) y CR (Razón de Consistencia) para validar juicios.\n🔁 Cálculo multicriterio por evidencia: Promedia matrices de expertos y genera una priorización robusta y consensuada.\n📥 Integración con Google Sheets: Lectura dinámica de bases de datos de riesgo, criterios, actividades y unidades.\n🗂️ Generación de resultados regionalizados: Matriz por región con niveles de riesgo (ALTO, MEDIO, BAJO) y número de fiscalizaciones requeridas.\n🗓️ Distribución temporal de acciones: Asignación mensual de acciones operativas según ponderación.\n💾 Exportación de resultados: Guarda resultados finales de consistencia en nuevas hojas dentro del mismo Google Sheet.\n\n\n\n💡 Aspectos destacables\n\nEnfocado en la transparencia y trazabilidad de decisiones institucionales.\nModular y fácil de adaptar a otros tipos de análisis AHP (educación, salud, proyectos).\nPermite centralizar la toma de decisiones con datos colaborativos en línea (Google Sheets).\nInterfaz amigable que no requiere conocimientos técnicos del usuario final.\n\n\n\n🧑🏻‍💻 Aplicativo",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto AHP"
+    ]
+  },
+  {
+    "objectID": "ahp.html#aplicativo-web-análisis-de-riesgos-con-ahp",
+    "href": "ahp.html#aplicativo-web-análisis-de-riesgos-con-ahp",
+    "title": "Aplicativo web para la aplicación del Método del proceso jerárquico analítico en las actividades de comercialización de hidrocarburos en el Perú",
+    "section": "",
+    "text": "Este proyecto implementa un sistema de priorización de riesgos utilizando el Método Analítico Jerárquico (AHP), con una interfaz web interactiva desarrollada con Marimo y alojada en Hugging Face Spaces.\nEl objetivo es facilitar la evaluación multicriterio de riesgos y la distribución estratégica de acciones fiscales, especialmente útil en contextos como el planeamiento anual de inspecciones o monitoreos institucionales.\n\n\n\n\nMarimo: Framework Python para construir notebooks interactivos y apps web.\nNumPy y Pandas: Procesamiento y análisis de matrices y datos.\ngspread: Conexión con Google Sheets para cargar, escribir y sincronizar datos en tiempo real.\noauth2client: Autenticación segura con Google APIs mediante archivo credentials.json.\nemoji y HTML embebido: Mejora visual con íconos, estilos y estructuras jerárquicas.\n\n\n\n\n\n\n📊 Evaluación AHP Interactiva: Comparación de criterios mediante sliders visuales para construir matrices de decisión.\n✅ Verificación de consistencia: Cálculo automático de CI (Índice de Consistencia) y CR (Razón de Consistencia) para validar juicios.\n🔁 Cálculo multicriterio por evidencia: Promedia matrices de expertos y genera una priorización robusta y consensuada.\n📥 Integración con Google Sheets: Lectura dinámica de bases de datos de riesgo, criterios, actividades y unidades.\n🗂️ Generación de resultados regionalizados: Matriz por región con niveles de riesgo (ALTO, MEDIO, BAJO) y número de fiscalizaciones requeridas.\n🗓️ Distribución temporal de acciones: Asignación mensual de acciones operativas según ponderación.\n💾 Exportación de resultados: Guarda resultados finales de consistencia en nuevas hojas dentro del mismo Google Sheet.\n\n\n\n\n\n\nEnfocado en la transparencia y trazabilidad de decisiones institucionales.\nModular y fácil de adaptar a otros tipos de análisis AHP (educación, salud, proyectos).\nPermite centralizar la toma de decisiones con datos colaborativos en línea (Google Sheets).\nInterfaz amigable que no requiere conocimientos técnicos del usuario final.",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto AHP"
+    ]
+  },
+  {
+    "objectID": "pstc.html#aplicativo-web-tesis-de-bachillerato-power-system-transmission-calculator-pstc",
+    "href": "pstc.html#aplicativo-web-tesis-de-bachillerato-power-system-transmission-calculator-pstc",
+    "title": "Aplicativo web para la fiscalización de sistemas de tanques enterrados a nivel nacional",
+    "section": "📘 Aplicativo Web: Tesis de Bachillerato – Power System Transmission Calculator (PSTC)",
+    "text": "📘 Aplicativo Web: Tesis de Bachillerato – Power System Transmission Calculator (PSTC)\nEste aplicativo es una presentación web interactiva desarrollada como parte de una tesis de bachillerato, titulada “Power System Transmission Calculator (PSTC)”. La aplicación está implementada con Streamlit, y se estructura como una serie de diapositivas temáticas, permitiendo al usuario explorar la tesis de manera intuitiva y visual.\n\n\n🔧 Tecnologías y librerías utilizadas\n\nStreamlit: Framework principal para la interfaz web.\nstreamlit_flow: Para crear diagramas de flujo interactivos y visuales.\nPIL (Python Imaging Library): Para la carga y manipulación de imágenes.\nMATLAB: Motor de cálculo en el backend (complementario a la presentación).\nGitHub: Control de versiones y despliegue del código.\n\n\n\n\n⚙️ Funcionalidades principales\n\n🧭 Sistema de navegación modular: Implementado con una clase Slides, que permite desplazarse fluidamente entre secciones (10 diapositivas organizadas).\n🖼️ Componentes UI personalizados: Clases como titulo, texto, y flowchart permiten mantener coherencia visual entre las páginas.\n🔁 Diagramas interactivos: Diapositivas con nodos conectados animados, ideales para explicar procesos complejos.\n🖼️ Carga eficiente de imágenes: Se usan funciones con caché para acelerar la carga de elementos gráficos.\n🏫 Branding institucional: La app presenta el logo de la UNSA en la barra lateral, reforzando identidad académica.\n\n\n\n\n🧠 Contenido de las diapositivas\n\nPágina principal (presentación)\nResumen\nIntroducción\nMarco teórico\nMarco metodológico\nResultados\nValidación\nAplicación práctica\nConclusiones\nRecomendaciones\n\n\n\n\n💡 Aspectos destacables\n\n🚀 Innovación Técnica\n\nDigitalización de diagramas técnicos con ecuaciones matemáticas complejas (LaTeX).\nIntegración de tecnologías heterogéneas: MATLAB + GitHub + Streamlit.\nComponentes visuales HTML reutilizables.\nArquitectura escalable, mantenible y modular.\n\n\n\n📊 Impacto del Proyecto\n\nAplicación gratuita y accesible para ingenieros mecánicos.\nValidación práctica con casos reales de la industria.\nPrimera tesis en la facultad que combina ingeniería mecánica e informática mediante una herramienta digital.\nUtiliza visualizaciones modernas para apoyar el aprendizaje técnico.\n\n\n\n\n\n🧩 Notas finales\nEste proyecto representa una convergencia única entre ingeniería mecánica y desarrollo de software. La aplicación en Streamlit funciona como interfaz visual para un sistema de cálculo más amplio en MATLAB, demostrando habilidades en diseño de soluciones end-to-end, integración de tecnologías y generación de herramientas educativas modernas.\n\n\n🧑🏻‍💻 Aplicativo",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto PSTC"
+    ]
+  },
+  {
+    "objectID": "pstc.html",
+    "href": "pstc.html",
+    "title": "Aplicativo web para la fiscalización de sistemas de tanques enterrados a nivel nacional",
+    "section": "",
+    "text": "Este aplicativo es una presentación web interactiva desarrollada como parte de una tesis de bachillerato, titulada “Power System Transmission Calculator (PSTC)”. La aplicación está implementada con Streamlit, y se estructura como una serie de diapositivas temáticas, permitiendo al usuario explorar la tesis de manera intuitiva y visual.\n\n🔧 Tecnologías y librerías utilizadas\n\nStreamlit: Framework principal para la interfaz web.\nstreamlit_flow: Para crear diagramas de flujo interactivos y visuales.\nPIL (Python Imaging Library): Para la carga y manipulación de imágenes.\nMATLAB: Motor de cálculo en el backend (complementario a la presentación).\nGitHub: Control de versiones y despliegue del código.\n\n\n\n⚙️ Funcionalidades principales\n\n🧭 Sistema de navegación modular: Implementado con una clase Slides, que permite desplazarse fluidamente entre secciones (10 diapositivas organizadas).\n🖼️ Componentes UI personalizados: Clases como titulo, texto, y flowchart permiten mantener coherencia visual entre las páginas.\n🔁 Diagramas interactivos: Diapositivas con nodos conectados animados, ideales para explicar procesos complejos.\n🖼️ Carga eficiente de imágenes: Se usan funciones con caché para acelerar la carga de elementos gráficos.\n🏫 Branding institucional: La app presenta el logo de la UNSA en la barra lateral, reforzando identidad académica.\n\n\n\n🧠 Contenido de las diapositivas\n\nPágina principal (presentación)\nResumen\nIntroducción\nMarco teórico\nMarco metodológico\nResultados\nValidación\nAplicación práctica\nConclusiones\nRecomendaciones\n\n\n\n💡 Aspectos destacables\n\n🚀 Innovación Técnica\n\nDigitalización de diagramas técnicos con ecuaciones matemáticas complejas (LaTeX).\nIntegración de tecnologías heterogéneas: MATLAB + GitHub + Streamlit.\nComponentes visuales HTML reutilizables.\nArquitectura escalable, mantenible y modular.\n\n\n\n📊 Impacto del Proyecto\n\nAplicación gratuita y accesible para ingenieros mecánicos.\nValidación práctica con casos reales de la industria.\nPrimera tesis en la facultad que combina ingeniería mecánica e informática mediante una herramienta digital.\nUtiliza visualizaciones modernas para apoyar el aprendizaje técnico.\n\n\n\n\n🧩 Notas finales\nEste proyecto representa una convergencia única entre ingeniería mecánica y desarrollo de software. La aplicación en Streamlit funciona como interfaz visual para un sistema de cálculo más amplio en MATLAB, demostrando habilidades en diseño de soluciones end-to-end, integración de tecnologías y generación de herramientas educativas modernas.\n\n\n🧑🏻‍💻 Aplicativo",
+    "crumbs": [
+      "GitHub",
+      "Portafolio laboral",
+      "Proyecto PSTC"
+    ]
+  }
+]
