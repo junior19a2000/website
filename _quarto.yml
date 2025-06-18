@@ -48,10 +48,11 @@ website:
 format:
   html:
     theme:
-      - lux
-      - flatly
+      light: [yeti, flatly]
+      dark: [yeti, darkly]
     css: styles.css
     toc: true
+    prefer-dark: true
 
 
 editor:
