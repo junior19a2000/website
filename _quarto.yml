@@ -45,9 +45,13 @@ website:
       - section: "Portafolio académico"
         contents:
           - text: "Cálculo de Silos"
+            href: silos.qmd
           - text: "Analisis de estructuras en 2D mediante elementos finitos"
+            href: silos.qmd
           - text: "Analisis de estructuras en 3D mediante elementos finitos"
+            href: silos.qmd
           - text: "Analisis de estructuras planas mediante elementos finitos"
+            href: silos.qmd
   # page-footer: 
   #   border: true
   #   center: "Desarrollado con Quarto y desplegado con GitHub"
