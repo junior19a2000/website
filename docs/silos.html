@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aplicativo web para la busqueda de expedientes Osinergmin relacionados</title>
+<title>Análisis de Silos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -288,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Aplicativo web para la busqueda de expedientes Osinergmin relacionados</h1>
+          <h1 class="quarto-secondary-nav-title">Análisis de Silos</h1>
         </a>     
     </div>
   </nav>
@@ -339,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Proyecto SearchIT</span></a>
   </div>
 </li>
@@ -374,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./silos.html" class="sidebar-item-text sidebar-link">
+  <a href="./silos.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cálculo de Silos</span></a>
   </div>
 </li>
@@ -421,7 +421,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Aplicativo web para la busqueda de expedientes Osinergmin relacionados</h1>
+<h1 class="title d-none d-lg-block">Análisis de Silos</h1>
 </div>
 
 
@@ -439,35 +439,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 <hr>
-<p>Este proyecto implementa un <strong>sistema de búsqueda y verificación de coincidencias</strong> entre diferentes bases de datos de expedientes, utilizando técnicas de preprocesamiento de texto y comparaciones basadas en expresiones regulares y manipulación avanzada de datos con <strong>pandas</strong>. Está orientado a facilitar el <strong>cruce de información histórica</strong> de expedientes institucionales entre los años 2015 y 2022.</p>
+<p>Este aplicativo interactivo, desarrollado con <strong>Marimo</strong> y alojado en <a href="https://huggingface.co/spaces/Junior19/STE2025">Hugging Face Spaces</a>, permite realizar un <strong>análisis técnico-normativo</strong> del cumplimiento del <strong>Decreto Supremo N° 001-2022-EM</strong>, que regula la <strong>hermeticidad de tanques y tuberías enterrados</strong> que almacenan combustibles líquidos (CL) en el Perú.</p>
+<p>La herramienta integra múltiples fuentes de datos, evalúa el cumplimiento técnico a nivel nacional y regional, y genera <strong>informes y oficios automatizados</strong> dirigidos a establecimientos con incumplimientos detectados.</p>
 <section id="tecnologías-y-librerías-utilizadas" class="level3">
 <h3 class="anchored" data-anchor-id="tecnologías-y-librerías-utilizadas">🔧 Tecnologías y librerías utilizadas</h3>
 <ul>
-<li><strong>Pandas</strong>: Manipulación y análisis de datos tabulares.</li>
-<li><strong>re (expresiones regulares)</strong>: Limpieza, transformación y comparación de texto libre.</li>
-<li><strong>ipywidgets</strong>: Creación de widgets interactivos para filtros y controles en Jupyter Notebook.</li>
-<li><strong>PyDrive</strong>: Conexión segura con Google Drive para autenticación y manejo de archivos.</li>
-<li><strong>openpyxl</strong>: Lectura y edici’on de archivos <code>.xlsx</code> usados como fuentes de datos para múltiples años.</li>
+<li><strong>Marimo</strong>: Framework Python para apps interactivas y notebooks reproducibles.</li>
+<li><strong>Pandas</strong> y <strong>NumPy</strong>: Limpieza, transformación y análisis de datos estructurados.</li>
+<li><strong>Altair</strong>: Visualización avanzada de datos, como barras apiladas y mapas de calor.</li>
+<li><strong>DocxTemplate</strong>: Generación automática de documentos <code>.docx</code> con plantillas dinámicas.</li>
+<li><strong>gspread</strong>, <strong>requests</strong>, <strong>zipfile</strong>, <strong>datetime</strong>: Manipulación de archivos, descargas web y fechas.</li>
+<li><strong>OpenPyXL</strong>: Exportación de resultados a Excel.</li>
+<li><strong>Regex (re)</strong>: Limpieza y extracción de datos no estructurados en campos complejos.</li>
 </ul>
 </section>
 <section id="funcionalidades-principales" class="level3">
 <h3 class="anchored" data-anchor-id="funcionalidades-principales">⚙️ Funcionalidades principales</h3>
 <ul>
-<li>📂 <strong>Carga masiva de bases de datos</strong>: Lectura automatizada de archivos Excel con datos de expedientes por año.</li>
-<li>🔐 <strong>Autenticación con Google Drive</strong>: Uso de credenciales seguras (<code>credentials_module.json</code>) para acceder y manejar archivos en la nube.</li>
-<li>🧹 <strong>Normalización de texto</strong>: Limpieza profunda de datos con eliminación de símbolos, mayúsculas/minúsculas, etc.</li>
-<li>🔍 <strong>Búsqueda por coincidencias</strong>: Comparación de textos usando expresiones regulares para encontrar coincidencias exactas o aproximadas entre nombres de expedientes y listados de ID.</li>
-<li>📊 <strong>Análisis comparativo entre archivos</strong>: Identificación de registros faltantes, duplicados, mal escritos o inconsistentes.</li>
-<li>🧩 <strong>Widgets interactivos</strong>: Filtrado de datos por año, tipo de expediente, y visualización dinámica de coincidencias.</li>
+<li>📥 <strong>Descarga y procesamiento de registros oficiales</strong> desde fuentes de OSINERGMIN.</li>
+<li>🧪 <strong>Evaluación técnica del estado de tanques</strong>: hermeticidad, antigüedad, tipo de combustible, pruebas realizadas, etc.</li>
+<li>🧾 <strong>Generación de matriz consolidada</strong> con toda la información estructurada por agente fiscalizado.</li>
+<li>📊 <strong>Visualizaciones dinámicas</strong>:
+<ul>
+<li>Mapas de calor de tanques herméticos/no herméticos.</li>
+<li>Gráficos regionales de cumplimiento.</li>
+<li>Dispersión de edad vs capacidad de tanques.</li>
+</ul></li>
+<li>🗃️ <strong>Generación automatizada de oficios personalizados</strong> por región, incluyendo gráficos e información normativa.</li>
+<li>📈 <strong>Exportación de datos filtrados</strong> para seguimiento o análisis posterior.</li>
+<li>🔍 <strong>Filtros por región, tipo de análisis y estado (completo, incompleto, nulo)</strong>.</li>
 </ul>
 </section>
 <section id="aspectos-destacables" class="level3">
 <h3 class="anchored" data-anchor-id="aspectos-destacables">💡 Aspectos destacables</h3>
 <ul>
-<li>Útil para <strong>auditorías y trazabilidad documental</strong>, especialmente en procesos de fiscalización o control institucional.</li>
-<li>Permite manejar múltiples fuentes de datos con estructuras similares pero contenido variable.</li>
-<li>El enfoque modular permite extenderlo fácilmente a nuevos años o tipos de documentos.</li>
-<li>El uso de widgets mejora la <strong>interacción del analista sin necesidad de reescribir código</strong>.</li>
+<li>Aplicación enfocada en <strong>gestión regulatoria y cumplimiento normativo</strong>.</li>
+<li>Automatización completa del flujo: desde la recolección hasta la emisión de oficios.</li>
+<li>Funcionalidad para <strong>detectar establecimientos fuera de plazo</strong> o sin pruebas registradas.</li>
+<li>Se adapta fácilmente a nuevas normativas o grupos regionales.</li>
+<li>Promueve la <strong>fiscalización inteligente</strong>, priorizando recursos hacia agentes con mayor riesgo.</li>
 </ul>
 </section>
 <section id="aplicativo" class="level3">
@@ -475,7 +485,7 @@ ul.task-list li input[type="checkbox"] {
 <div style="position: relative; width: 100%; min-height: 500px; padding-top: 50%;
  padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 2em; margin-bottom: 2em; overflow: hidden;
  border-radius: 16px; will-change: transform;">
-<p><iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://junior19-searchit.hf.space" allowfullscreen="allowfullscreen" allow="fullscreen"> </iframe></p>
+<p><iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;" src="https://junior19-ste2025.hf.space" allowfullscreen="allowfullscreen" allow="fullscreen"> </iframe></p>
 </div>
 
 
