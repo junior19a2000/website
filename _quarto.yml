@@ -42,6 +42,12 @@ website:
             href: ste.qmd
           - text: "Proyecto PSTC"
             href: pstc.qmd
+      - section: "Portafolio académico"
+        contents:
+          - text: "Cálculo de Silos"
+          - text: "Analisis de estructuras en 2D mediante elementos finitos"
+          - text: "Analisis de estructuras en 3D mediante elementos finitos"
+          - text: "Analisis de estructuras planas mediante elementos finitos"
   # page-footer: 
   #   border: true
   #   center: "Desarrollado con Quarto y desplegado con GitHub"
